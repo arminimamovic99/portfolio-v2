@@ -1,13 +1,16 @@
 import { faqItems } from "@/lib/data";
+import { Reveal, RevealStagger } from "@/components/scroll-reveal";
 
 export function Faq() {
   return (
     <section id="faq" className="scroll-mt-24 border-t border-border/60 bg-background">
       <div className="mx-auto max-w-3xl px-6 py-24 sm:py-32">
-        <h2 className="mb-16 text-sm font-medium tracking-widest text-muted uppercase">
-          FAQ
-        </h2>
-        <div className="flex flex-col gap-4">
+        <Reveal>
+          <h2 className="mb-16 text-sm font-medium tracking-widest text-muted uppercase">
+            FAQ
+          </h2>
+        </Reveal>
+        <RevealStagger y={16} stagger={0.06} className="flex flex-col gap-4">
           {faqItems.map((item) => (
             <details
               key={item.question}
@@ -27,7 +30,7 @@ export function Faq() {
               </p>
             </details>
           ))}
-        </div>
+        </RevealStagger>
       </div>
     </section>
   );

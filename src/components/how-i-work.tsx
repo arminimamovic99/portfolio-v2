@@ -1,5 +1,6 @@
 import { Spotlight } from "@/components/spotlight";
 import { processSteps } from "@/lib/data";
+import { Reveal, RevealStagger } from "@/components/scroll-reveal";
 
 export function HowIWork() {
   return (
@@ -9,10 +10,16 @@ export function HowIWork() {
     >
       <Spotlight variant="static" anchor="top-right" />
       <div className="relative mx-auto max-w-5xl px-6 py-24 sm:py-32">
-        <h2 className="mb-16 text-sm font-medium tracking-widest text-muted uppercase">
-          How I work
-        </h2>
-        <div className="relative grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-8">
+        <Reveal>
+          <h2 className="mb-16 text-sm font-medium tracking-widest text-muted uppercase">
+            How I work
+          </h2>
+        </Reveal>
+        <RevealStagger
+          y={18}
+          stagger={0.12}
+          className="relative grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-8"
+        >
           <div
             aria-hidden
             className="absolute top-5 right-0 left-0 hidden h-px bg-border md:block"
@@ -30,7 +37,7 @@ export function HowIWork() {
               </p>
             </div>
           ))}
-        </div>
+        </RevealStagger>
       </div>
     </section>
   );

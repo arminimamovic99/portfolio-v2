@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { Spotlight } from "@/components/spotlight";
 import { calendlyUrl, email } from "@/lib/data";
+import { Reveal } from "@/components/scroll-reveal";
 
 export function Contact() {
   return (
     <section className="relative overflow-hidden border-t border-border/60 bg-background">
       <Spotlight />
-      <div className="relative mx-auto flex max-w-3xl flex-col items-start px-6 py-24 sm:py-32">
+      <Reveal className="relative mx-auto flex max-w-3xl flex-col items-start px-6 py-24 sm:py-32">
         <h2 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
           Need help building something cool?
           <br />
@@ -28,7 +29,7 @@ export function Contact() {
             {email}
           </Link>
         </div>
-      </div>
+      </Reveal>
       <div className="relative mx-auto max-w-3xl px-6 pb-10">
         <p className="text-xs text-muted">
           © {new Date().getFullYear()} Armin Imamovic

@@ -6,8 +6,8 @@ export type Company = {
 };
 
 export const companies: Company[] = [
-  { name: "Sandvik", logo: "/sandvik.svg.webp", logoWidth: 1200, logoHeight: 600 },
-  { name: "Helbling", logo: "/helbling.png", logoWidth: 900, logoHeight: 500 },
+  { name: "Sandvik", logo: "/Sandvik-Logo-24.webp", logoWidth: 1500, logoHeight: 750 },
+  { name: "Helbling", logo: "/helbling.png", logoWidth: 1200, logoHeight: 600 },
   { name: "HNT", logo: "/hnt.png", logoWidth: 400, logoHeight: 94 },
   {
     name: "KnowL",
@@ -21,6 +21,9 @@ export const calendlyUrl =
   "https://calendly.com/aimamovic99/software-development-consulting-intro-call";
 
 export const email = "aimamovic99@outlook.com";
+
+export const linkedinUrl = "https://linkedin.com/in/armin-imamovic";
+export const githubUrl = "https://github.com/arminimamovic99";
 
 export type NavLink = {
   label: string;
@@ -129,21 +132,21 @@ export type ProcessStep = {
 export const processSteps: ProcessStep[] = [
   {
     number: "01",
-    title: "🤔 Validate",
+    title: "🤔 Research & Discovery",
     description:
-      "I don't build for the sake of building. Before anything else, I find out if this actually needs building, or if an existing alternative already solves it.",
+      "I don't build for the sake of building. In the first phase, we sit down together to find out what exactly what we need to build to solve your biggest pain point",
   },
   {
     number: "02",
     title: "📔 Proof of Concept",
     description:
-      "Once validated, I build a proof of concept fast, proving to both of us that it can actually be built. You get a clickable demo with dummy data within days.",
+      "Once we identify a target, I build a proof of concept fast, demonstrating that a solution can actually be built. You get a clickable demo with dummy data within days.",
   },
   {
     number: "03",
     title: "🏗️ Build",
     description:
-      "Now it's full focus: building your MVP to the highest quality and polish I can deliver.",
+      "Now it's full focus: building your MVP to the highest quality and polish I can deliver. This is not a closed process though, you are involved daily, testing and validating as we go.",
   },
   {
     number: "04",
@@ -194,7 +197,7 @@ export type Comparison = {
 export const comparisons: Comparison[] = [
   {
     label: "Speed",
-    me: "MVP shipped in 2-4 weeks",
+    me: "MVP shipped in 3-6 weeks",
     agency: "Months, buried in process",
   },
   {
@@ -232,7 +235,7 @@ export type FaqItem = {
 export const faqItems: FaqItem[] = [
   {
     question: "How much does it cost to work with you?",
-    answer: "My rate is a fixed €45 per hour.",
+    answer: "My rate is a fixed €45 per hour. Depending on the scope and longevity of the project, we can also come up with a personalized monthly, or milestone-based rate.",
   },
   {
     question: "Where are you based, and how do we handle timezones?",

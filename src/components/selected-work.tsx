@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, type KeyboardEvent } from "react";
+import { useState, type CSSProperties, type KeyboardEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { workItems, resumeUrl, resumePreview, type WorkItem } from "@/lib/data";
 import { ProjectModal } from "@/components/project-modal";
 import { Spotlight } from "@/components/spotlight";
+import { Reveal, RevealStagger } from "@/components/scroll-reveal";
 
 function CategoryBadge({ category }: { category: WorkItem["category"] }) {
   const isProduct = category === "product";
@@ -22,7 +23,13 @@ function CategoryBadge({ category }: { category: WorkItem["category"] }) {
   );
 }
 
-function WorkCard({ item }: { item: WorkItem }) {
+function WorkCard({
+  item,
+  style,
+}: {
+  item: WorkItem;
+  style?: CSSProperties;
+}) {
   const [open, setOpen] = useState(false);
   const isInteractive = Boolean(item.details);
 
@@ -36,7 +43,7 @@ function WorkCard({ item }: { item: WorkItem }) {
 
   return (
     <>
-      <div className="flex h-full flex-col gap-3">
+      <div style={style} className="flex h-full flex-col gap-3">
         <CategoryBadge category={item.category} />
         <article
           role={isInteractive ? "button" : undefined}
@@ -148,15 +155,23 @@ export function SelectedWork() {
     >
       <Spotlight />
       <div className="relative mx-auto max-w-5xl px-6 py-24 sm:py-32">
-        <h2 className="mb-16 text-sm font-medium tracking-widest text-muted uppercase">
-          Selected work
-        </h2>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <Reveal>
+          <h2 className="mb-16 text-sm font-medium tracking-widest text-muted uppercase">
+            Selected work
+          </h2>
+        </Reveal>
+        <RevealStagger
+          y={30}
+          stagger={0.12}
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2"
+        >
           {workItems.map((item) => (
             <WorkCard key={item.title} item={item} />
           ))}
-        </div>
-        <ResumeCallout />
+        </RevealStagger>
+        <Reveal delay={0.1}>
+          <ResumeCallout />
+        </Reveal>
       </div>
     </section>
   );
