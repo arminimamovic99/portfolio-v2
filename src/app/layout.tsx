@@ -17,8 +17,8 @@ const companyNames = companies.map((company) => company.name);
 const companyList = `${companyNames.slice(0, -1).join(", ")}, and ${companyNames.at(-1)}`;
 
 export const metadata: Metadata = {
-  title: "Armin Imamovic, Frontend Engineer",
-  description: `Frontend engineer and product lead. I've built for ${companyList}, then built and sold my own SaaS. Now I build yours.`,
+  title: "Armin Imamovic | Software Development Consultant",
+  description: `Software engineer and product lead. I've built for ${companyList}, then built and sold my own SaaS. Now I build yours.`,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
