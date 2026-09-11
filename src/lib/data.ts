@@ -185,6 +185,45 @@ export const skillGroups: SkillGroup[] = [
   },
 ];
 
+export type Comparison = {
+  label: string;
+  me: string;
+  agency: string;
+};
+
+export const comparisons: Comparison[] = [
+  {
+    label: "Speed",
+    me: "MVP shipped in 2-4 weeks",
+    agency: "Months, buried in process",
+  },
+  {
+    label: "Cost",
+    me: "Fixed rate, agreed in writing at the start. No markup",
+    agency: "Blended rates plus agency overhead",
+  },
+  {
+    label: "Who builds it",
+    me: "Me, every line, start to finish",
+    agency: "Reassigned between teams of devs",
+  },
+  {
+    label: "Communication",
+    me: "Direct line to the person building it",
+    agency: "Routed through account managers",
+  },
+  {
+    label: "Decisions",
+    me: "Made the same day",
+    agency: "Wait for the next status call",
+  },
+  {
+    label: "Focus",
+    me: "Your project, full attention",
+    agency: "One of several client accounts",
+  },
+];
+
 export type FaqItem = {
   question: string;
   answer: string;

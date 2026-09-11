@@ -12,14 +12,17 @@ export function Hero() {
       <div className="relative mx-auto flex max-w-6xl flex-col-reverse items-center gap-8 px-6 py-32 sm:py-40 md:flex-row md:items-center md:justify-between md:gap-6">
         <div className="flex flex-col items-start md:max-w-3xl">
           <h1 className="text-3xl leading-[1.15] font-semibold tracking-tight sm:text-5xl sm:leading-[1.15] md:text-6xl md:leading-[1.1]">
-            <span className="text-shine">A proven builder</span>
+            <span className="text-shine">I turn your ideas into real products.</span>
             <br />
-            7+ years of shipping.
+            Design, build, launch.
             <br />
-            Across the EU.
-            <br />
-            Industry agnostic.
+            <span className="text-shine">
+              You don&rsquo;t lift a finger.
+            </span>
           </h1>
+          {/* <p className="mt-2 text-lg text-muted sm:text-xl">
+            7+ years of building across the EU. Industry agnostic.
+          </p> */}
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Link
               href={calendlyUrl}
