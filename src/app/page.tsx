@@ -5,6 +5,7 @@ import { WhoIAm } from "@/components/who-i-am";
 import { SoloVsAgency } from "@/components/solo-vs-agency";
 import { HowIWork } from "@/components/how-i-work";
 import { SelectedWork } from "@/components/selected-work";
+import { Testimonials } from "@/components/testimonials";
 import { Skills } from "@/components/skills";
 import { Faq } from "@/components/faq";
 import { Contact } from "@/components/contact";
@@ -20,6 +21,7 @@ export default function Home() {
         <SoloVsAgency />
         <HowIWork />
         <SelectedWork />
+        <Testimonials />
         <Skills />
         <Faq />
         <Contact />

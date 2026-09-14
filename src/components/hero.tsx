@@ -35,10 +35,6 @@ export function Hero() {
     <section className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 opacity-40">
         <Aurora colorStops={["#ff7a45", "#ffe9d6", "#4C2414"]} amplitude={1.2} blend={0.8} />
-        {/* <LightRays raysColor="#ff7a45" lightSpread={5.2} fadeDistance={1.3}></LightRays> */}
-        {/* <DotField glowColor="#ff7a45" gradientFrom="#ff7a45" gradientTo="#1b0f08" waveAmplitude={3}></DotField> */}
-        {/* <DotGrid baseColor="#4C2414" activeColor="#ff7a45"/> */}
-        {/* <ShapeGrid speed="0.2" direction="diagonal" borderColor="#4C2414" hoverFillColor="#4C2414"/> */}
       </div>
       <div className="relative mx-auto flex max-w-6xl flex-col-reverse items-center gap-8 px-6 py-32 sm:py-40 md:flex-row md:items-center md:justify-between md:gap-6">
         <div className="flex flex-col items-start md:max-w-3xl">
@@ -72,10 +68,10 @@ export function Hero() {
               Book a call
             </Link>
             <Link
-              href="#how-i-work"
+              href="#work"
               className="inline-flex items-center rounded-full border border-border px-6 py-3 text-sm font-medium text-foreground transition-colors hover:border-accent/60 hover:text-accent"
             >
-              How I work
+              View my selected work
             </Link>
           </div>
         </div>
@@ -91,7 +87,7 @@ export function Hero() {
               width={480}
               height={480}
               priority
-              className="h-full w-full object-cover shadow-2xl"
+              className="h-full w-full object-cover shadow-4xl"
             />
           </div>
           <span className="rounded-full border border-border bg-background-elevated px-4 py-2 text-center text-sm text-muted">

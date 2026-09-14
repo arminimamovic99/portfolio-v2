@@ -6,14 +6,14 @@ export type Company = {
 };
 
 export const companies: Company[] = [
-  { name: "Sandvik", logo: "/Sandvik-Logo-24.webp", logoWidth: 1500, logoHeight: 750 },
-  { name: "Helbling", logo: "/helbling.png", logoWidth: 1200, logoHeight: 600 },
-  { name: "HNT", logo: "/hnt.png", logoWidth: 400, logoHeight: 94 },
+  { name: "Sandvik", logo: "/Sandvik-Logo.png", logoWidth: 120, logoHeight: 60 },
+  { name: "Helbling", logo: "/helbling2.png", logoWidth: 60, logoHeight: 60 },
+  { name: "HNT", logo: "/hnt.png", logoWidth: 120, logoHeight: 60 },
   {
     name: "KnowL",
     logo: "/knowl.png",
-    logoWidth: 400,
-    logoHeight: 400,
+    logoWidth: 60,
+    logoHeight: 60,
   },
 ];
 
@@ -57,49 +57,64 @@ export type WorkItem = {
   tech: string[];
   category: "client" | "product";
   url: string;
+  screenshots?: string[];
   details?: ProductDetails;
 };
 
 export const workItems: WorkItem[] = [
   {
     title: "KnowL",
-    client: "KnowL Solutions",
+    client: "🇳🇱 KnowL Solutions",
     period: "Jan 2023 – Nov 2025",
     description:
-      "Led a content management UI giving non-technical staff full control over platform content. Restructured the codebase for scale, which cut load times and improved reliability across the platform.",
-    tech: ["React", "Next.js", "TypeScript", "RxJS", "NgRx"],
+      "Lead and owned the frontend of an employee communication + learning + knowledge-management platform for large organizations. Rewrote the application from a legacy Angular 5+ codebase into a modern Angular 19 + Tailwind setup, improved performance, UX, ease of use, and end user satisfaction.",
+    tech: ["Angular", "TypeScript", "RxJS", "NgRx"],
     category: "client",
     url: "https://knowl.solutions/",
+    screenshots: ["/knowl/ss1.png"],
   },
   {
     title: "LILO Online",
-    client: "Wohlhart Lernsoftware",
+    client: "🇦🇹 🇩🇪 Wohlhart Lernsoftware | Helbling",
     period: "Oct 2020 – Jan 2023",
     description:
-      "Enterprise eLearning platform deployed across elementary schools in Austria and Germany. Rewrote core features from a legacy system to React/Next.js, improving UX and end-user satisfaction for teachers and students. Architected a new content management UI and set coding guidelines adopted by the full team.",
-    tech: ["React", "Next.js", "Angular", "TypeScript", "Azure DevOps"],
+      "Enterprise eLearning platform deployed across elementary schools in Austria and Germany. Rewrote core features from a legacy system to a modern Angular/Phaser.js codebase, improving UX and end-user satisfaction for teachers and students.",
+    tech: ["Angular", "TypeScript", "RxJS", "NgRx", "Phaser.js"],
     category: "client",
     url: "https://www.helbling.com/at/de/lilo",
+    screenshots: ["/lilo/ss1.png", "/lilo/ss2.png"],
   },
   {
     title: "BoB",
-    client: "Wohlhart Lernsoftware",
+    client: "🇦🇹 Wohlhart Lernsoftware",
     period: "Oct 2020 – Jan 2023",
     description:
       "Large-scale student observation platform (bobdigi.at). Led frontend development, optimizing performance for reliable cross-platform operation across Android, iOS, and desktop.",
-    tech: ["React", "Next.js", "Angular", "TypeScript", "Azure DevOps"],
+    tech: ["Angular", "TypeScript", "RxJS", "NgRx"],
     category: "client",
     url: "https://bobdigi.at",
+    screenshots: ["/bob/ss1.png", "/bob/ss2.png"],
+  },
+  {
+    title: "InnoBook",
+    client: "🇩🇪 InnoBook UG",
+    period: "Oct 2025 – Apr 2026",
+    description:
+      "German marketplace + booking platform for leisure experiences and events. I integrated as a full-stack engineer - extended and stabilized backend functionality, implemented multiple new client facing features, and improved UI/UX on key application flows.",
+    tech: ["Vue.js", "Nuxt", "Laravel", "APIPlatform"],
+    category: "client",
+    url: "https://innobook.me"
   },
   {
     title: "LoungeLink",
-    client: "Founder",
+    client: "🇧🇦 Founder",
     period: "2024 – Present",
     description:
-      "Designed, built, and sold a SaaS platform for hookah lounges (orders, inventory, table service, analytics) as a one-person company. Landed the first paying client on a recurring subscription, fixed a production data-integrity bug with server-side idempotency, and integrated real-time thermal receipt printing.",
+      "Designed, built, and sold a SaaS platform for hookah lounges (orders, inventory, table service, analytics) as a one-person company. Landed my first paying client on a recurring subscription, currently scaling to more customers.",
     tech: ["React", "Next.js", "Supabase", "Node.js", "PostgreSQL"],
     category: "product",
     url: "https://lounge-link.app",
+    screenshots: ["/loungelink/admin-overview.png"],
     details: {
       tagline: "SaaS · Hospitality Operations",
       role: "Founder & Developer",
@@ -224,6 +239,34 @@ export const comparisons: Comparison[] = [
     label: "Focus",
     me: "Your project, full attention",
     agency: "One of several client accounts",
+  },
+];
+
+export type Testimonial = {
+  quote: string;
+  name: string;
+  role: string;
+  company: string;
+  initials: string;
+};
+
+// Placeholder quotes — swap in real client testimonials once gathered.
+export const testimonials: Testimonial[] = [
+  {
+    quote:
+      "Armin showed exceptional professionalism and expertise during development of our website. He didn't blindly follow suggestions, but pushed back on parts he knew didn't fit.",
+    name: "Semir Cancar",
+    role: "My client | Founder and CEO",
+    company: "MTF Group D.O.O",
+    initials: "SC",
+  },
+  {
+    quote:
+      "Armin is the first person that we reach out to whenever we have a software development project we need advice or consulting for. His outstanding work ethic, expertise and professional attitude is what keeps us coming back.",
+    name: "Deni Dedic",
+    role: "My client | Co-founder",
+    company: "EKD Solutions D.O.O",
+    initials: "DD",
   },
 ];
 

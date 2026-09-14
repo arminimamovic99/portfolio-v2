@@ -24,7 +24,7 @@ export function TrustedBy() {
                   alt={company.name}
                   width={company.logoWidth ?? 280}
                   height={company.logoHeight ?? 140}
-                  className="h-full w-auto object-contain"
+                  className="object-contain"
                 />
               ) : (
                 <span className="text-lg font-semibold tracking-tight text-foreground">
