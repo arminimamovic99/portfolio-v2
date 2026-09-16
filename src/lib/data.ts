@@ -34,6 +34,7 @@ export const navLinks: NavLink[] = [
   { label: "My Work", href: "#work" },
   { label: "About Me", href: "#about" },
   { label: "How I work", href: "#how-i-work" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -254,9 +255,17 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     quote:
+      "It has been a pleasure working with Armin as part of the same team.  Armin is a proactive and experienced Front End Developer who consistently delivers high quality solutions in a timely manner. He takes ownership of his work, contributes valuable insights, and is always willing to support the team when needed. Overall, he is reliable, collaborative, and very easy to work with, making him a valuable member of the team.",
+    name: "Azra Rujanac",
+    role: "Teammate | Delivery Manager",
+    company: "zendev",
+    initials: "AR",
+  },
+  {
+    quote:
       "Armin showed exceptional professionalism and expertise during development of our website. He didn't blindly follow suggestions, but pushed back on parts he knew didn't fit.",
     name: "Semir Cancar",
-    role: "My client | Founder and CEO",
+    role: "Client | Founder and CEO",
     company: "MTF Group D.O.O",
     initials: "SC",
   },
@@ -264,7 +273,7 @@ export const testimonials: Testimonial[] = [
     quote:
       "Armin is the first person that we reach out to whenever we have a software development project we need advice or consulting for. His outstanding work ethic, expertise and professional attitude is what keeps us coming back.",
     name: "Deni Dedic",
-    role: "My client | Co-founder",
+    role: "Client | Co-founder",
     company: "EKD Solutions D.O.O",
     initials: "DD",
   },
