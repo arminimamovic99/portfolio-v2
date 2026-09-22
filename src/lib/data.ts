@@ -6,7 +6,6 @@ export type Company = {
 };
 
 export const companies: Company[] = [
-  { name: "Sandvik", logo: "/Sandvik-Logo.png", logoWidth: 120, logoHeight: 60 },
   { name: "Helbling", logo: "/helbling2.png", logoWidth: 60, logoHeight: 60 },
   { name: "HNT", logo: "/hnt.png", logoWidth: 120, logoHeight: 60 },
   {
